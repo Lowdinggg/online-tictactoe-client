@@ -1,111 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.MotionBlur?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="711.0" prefHeight="460.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="711.0" prefHeight="460.0" prefWidth="711.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <right>
-      <VBox prefHeight="350.0" prefWidth="88.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="435.0" prefWidth="264.0" BorderPane.alignment="CENTER">
          <children>
-            <Separator prefWidth="200.0" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" textAlignment="CENTER" wrappingWidth="206.13671875">
+            <Text fill="#f8f8f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" textAlignment="CENTER" wrappingWidth="262.13671875">
                <font>
-                  <Font size="32.0" />
+                  <Font name="Cambria" size="32.0" />
                </font>
             </Text>
-            <Separator prefWidth="200.0" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VS" textAlignment="CENTER" wrappingWidth="206.828125" />
-            <Separator prefWidth="200.0" />
-            <Text layoutX="10.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" textAlignment="CENTER" wrappingWidth="206.13671875">
+            <Separator opacity="0.39" prefHeight="9.0" prefWidth="265.0">
+               <effect>
+                  <MotionBlur angle="90.0" radius="4.75" />
+               </effect></Separator>
+            <Text fill="#f8f8f2" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Points" textAlignment="CENTER" wrappingWidth="264.36328125">
                <font>
-                  <Font size="32.0" />
+                  <Font name="Cambria" size="17.0" />
                </font>
             </Text>
-            <Separator layoutX="10.0" layoutY="77.0" prefWidth="200.0" />
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: lightgray;">
+            <Separator opacity="0.39" prefHeight="9.0" prefWidth="265.0">
+               <effect>
+                  <MotionBlur angle="90.0" radius="4.75" />
+               </effect></Separator>
+            <Text fill="#f8f8f2" strokeType="OUTSIDE" strokeWidth="0.0" text="VS" textAlignment="CENTER" wrappingWidth="264.828125" />
+            <Separator opacity="0.39" prefWidth="200.0">
+               <effect>
+                  <MotionBlur angle="90.0" radius="4.75" />
+               </effect></Separator>
+            <Text fill="#f8f8f2" layoutX="10.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" textAlignment="CENTER" wrappingWidth="263.13671875">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Cambria" size="32.0" />
                </font>
-            </JFXButton>
-            <JFXButton layoutX="10.0" layoutY="132.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: lightgray;">
+            </Text>
+            <Separator opacity="0.39" prefHeight="6.0" prefWidth="265.0">
+               <effect>
+                  <MotionBlur angle="90.0" radius="4.75" />
+               </effect></Separator>
+            <Text fill="#f8f8f2" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Points" textAlignment="CENTER" wrappingWidth="264.36328125">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Cambria" size="17.0" />
                </font>
-            </JFXButton>
-            <JFXButton layoutX="10.0" layoutY="157.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: lightgray;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXButton>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Score" textAlignment="CENTER" wrappingWidth="204.13671875" />
+            </Text>
+            <JFXToolbar>
+               <bottom>
+                  <JFXButton prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #C45748;" text="Quit" textFill="#f8f8f2" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </bottom>
+               <left>
+                  <JFXButton prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #44475a;" textFill="#f8f8f2" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #44475a;" textFill="#f8f8f2" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </right>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXToolbar>
+            <Separator layoutX="10.0" layoutY="77.0" opacity="0.39" prefHeight="31.0" prefWidth="265.0">
+               <effect>
+                  <MotionBlur angle="90.0" radius="4.75" />
+               </effect></Separator>
+            <JFXListView prefHeight="142.0" prefWidth="265.0" style="-fx-background-color: #44475a;">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </JFXListView>
+            <HBox prefHeight="26.0" prefWidth="265.0">
+               <children>
+                  <JFXTextField focusColor="#f8f8f2" prefHeight="7.0" prefWidth="217.0" style="-fx-prompt-text-fill: #f8f8f2; -fx-text-inner-color: #f8f8f2;" unFocusColor="#a4a4a4">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton style="-fx-background-color: #44475a;" text="Send" textFill="#f8f8f2">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="6.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
       </VBox>
    </right>
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
-   <bottom>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </bottom>
    <center>
-      <GridPane gridLinesVisible="true" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <GridPane gridLinesVisible="true" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #44475a;" BorderPane.alignment="CENTER">
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="10.0" top="2.0" />
+         </BorderPane.margin>
       </GridPane>
    </center>
+   <top>
+      <HBox prefHeight="27.0" prefWidth="711.0" style="-fx-background-color: #44475a;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
 </BorderPane>
